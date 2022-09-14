@@ -87,13 +87,13 @@ const ProviderInfo2 = () => {
         </div>
 
         {/* provider_score */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <h1 className="text-gray-500 text-sm">Provider Score</h1>
           <h1 className="text-2xl mt-4">
             <span>{providerComponentApi?.provider_info?.score}</span>
             <span className="text-xs text-gray-500 ">/10</span>
           </h1>
-        </div>
+        </div> */}
 
         {/*NPS Score */}
         <div className="text-center">
