@@ -34,6 +34,7 @@ import NSSCard from "../NPS/NPS Overall Dashboard/NSSCard";
 import ProviderTotalCard2 from "./ProviderTotalCard2";
 import ProviderNSS from "./ProviderNSS";
 import ProviderInfo2 from "./ProviderInfo2";
+import PuffLoader from "react-spinners/PuffLoader";
 
 const ProviderScorePage = () => {
   // Global Variables
@@ -186,8 +187,17 @@ const ProviderScorePage = () => {
             )}
           </div>
         ) : (
-          <div className="min-h-[80vh]  w-full text-3xl text-gray-400 flex justify-center items-center">
-            Select a provider to display analytics
+          // <div className="min-h-[80vh]  w-full text-3xl text-gray-400 flex justify-center items-center">
+          //   Select a provider to display analytics
+          // </div>
+
+          <div className="min-h-[80vh]  h-full w-full bg-[#ffffff] z-[200] rounded-lg flex justify-center items-center">
+            <PuffLoader
+              color="#00ac69"
+              size={50}
+              width={100}
+              className="translate-y-40"
+            />
           </div>
         )}
       </div>

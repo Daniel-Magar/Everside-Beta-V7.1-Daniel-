@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRef } from "react";
 import { useRecoilState } from "recoil";
 import endDateValueProvider from "../../../recoil/atoms/EndDateAtomProvider";
@@ -42,6 +42,11 @@ const ProviderInfo2 = () => {
 
   const providerInfoComponent = useRef();
 
+  useEffect(() => {
+    console.log("final month...:", finalStartMonth);
+    console.log("testing final month", MonthList[finalEndMonth]);
+  }, [finalStartMonth]);
+
   return (
     <div ref={providerInfoComponent} className="border rounded-lg">
       <div className=" w-fit ml-auto">
@@ -60,13 +65,21 @@ const ProviderInfo2 = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-9 gap-10 xl:gap-5  p-5 ">
         {/* info */}
         <div className=" text-center  ">
-          <h1 className="text-gray-500 text-sm">
-            <span>{MonthList[finalStartMonth]}, </span>
-            <span>{finalStartDate}</span>
-            <span className="mx-1">-</span>
-            <span>{MonthList[finalEndMonth]}, </span>
-            <span>{finalEndDate}</span>
-          </h1>
+          {MonthList[finalStartMonth - 1] + "" + finalStartDate ===
+          MonthList[finalEndMonth - 1] + "" + finalEndDate ? (
+            <h1 className="text-gray-500 text-sm">
+              <span>{MonthList[finalEndMonth - 1]}, </span>
+              <span>{finalEndDate}</span>
+            </h1>
+          ) : (
+            <h1 className="text-gray-500 text-sm">
+              <span>{MonthList[finalStartMonth - 1]}, </span>
+              <span>{finalStartDate}</span>
+              <span className="mx-1">-</span>
+              <span>{MonthList[finalEndMonth - 1]}, </span>
+              <span>{finalEndDate}</span>
+            </h1>
+          )}
 
           <h1 className="text-2xl mt-3">
             {providerComponentApi?.provider_info?.name}

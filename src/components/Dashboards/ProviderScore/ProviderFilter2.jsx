@@ -110,7 +110,7 @@ const ProviderFilter2 = () => {
     setFlushClinicStatus(true);
     setFlushClientStatus(true);
     setTimeout(() => {
-      setFlushRegionvalue(false);
+      setFlushRegionvalue(falmonthListse);
       setFlushClinicStatus(false);
       setFlushClientStatus(false);
     }, 500);
@@ -165,6 +165,9 @@ const ProviderFilter2 = () => {
     }
   }
 
+  // useEffect(() => {
+  //   console.log("Finalllll:", monthList[finalEndMonth]);
+  // }, [monthList]);
   return (
     <div
       className={` ${
