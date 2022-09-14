@@ -110,7 +110,7 @@ const Filter = () => {
     setSendDataStatus(-1);
     setTimeout(setGoStatus(!goStatus), 5000);
   }, [clearFilterVar]);
-  monthList;
+
   const [activePageValue, setActivePageValue] = useRecoilState(activeInnerPage);
 
   return (
