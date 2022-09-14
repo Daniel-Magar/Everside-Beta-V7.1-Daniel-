@@ -110,7 +110,7 @@ const ProviderFilter2 = () => {
     setFlushClinicStatus(true);
     setFlushClientStatus(true);
     setTimeout(() => {
-      setFlushRegionvalue(falmonthListse);
+      setFlushRegionvalue(false);
       setFlushClinicStatus(false);
       setFlushClientStatus(false);
     }, 500);
