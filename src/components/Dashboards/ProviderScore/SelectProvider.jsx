@@ -183,10 +183,7 @@ const SelectProvider = () => {
               </div>
             </div>
 
-            <div
-              className="mt-2 z-[50]  min-h-[150px] max-h-[250px]
-overflow-y-scroll"
-            >
+            <div className="mt-2 z-[50]  min-h-[150px] max-h-[250px] overflow-y-scroll">
               {!providerAPIDATA?.provider.length > 0 ? (
                 <div className="flex justify-center items-center text-center">
                   <span className="text-[14px]  translate-y-1/2">
