@@ -35,6 +35,7 @@ import ProviderTotalCard2 from "./ProviderTotalCard2";
 import ProviderNSS from "./ProviderNSS";
 import ProviderInfo2 from "./ProviderInfo2";
 import PuffLoader from "react-spinners/PuffLoader";
+import ProviderTop from "../ProviderScore/ProviderTop"
 
 const ProviderScorePage = () => {
   // Global Variables
@@ -175,6 +176,7 @@ const ProviderScorePage = () => {
                   <div className="flex-[0.3] gap-5 flex xl:flex-col">
                     <ProviderNPS />
                     <ProviderNSS />
+                    <ProviderTop/>
                   </div>
                 </div>
               </div>
