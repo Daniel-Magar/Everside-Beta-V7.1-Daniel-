@@ -178,6 +178,8 @@ const ProviderScorePage = () => {
                     <ProviderNSS />
                     <ProviderTop/>
                   </div>
+              
+
                 </div>
               </div>
             ) : (

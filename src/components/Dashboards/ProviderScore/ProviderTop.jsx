@@ -93,7 +93,7 @@ const ProviderTop = () => {
   }, [providerAllTopics]);
 
   return (
-    <div className=" rounded-lg bg-white transition-all w-[100%] p-2 h-[150px] border">
+    <div className=" rounded-lg bg-white transition-all w-full  p-2  min-h-[245px] border">
       {apiData?.data?.length === 0 && (
         <div className="flex 2 h-full w-full justify-center items-center text-gray-400">
           No Providers
